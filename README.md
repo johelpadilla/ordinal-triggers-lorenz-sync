@@ -2,7 +2,9 @@
 
 Code, simulated data and LaTeX source for the article
 
-> J. Padilla-Villanueva, *Zeno-free but late: ordinal event triggers with a guaranteed minimum inter-event time in master–slave Lorenz synchronisation*, 2026.
+> J. Padilla-Villanueva, *Zeno-free but late: ordinal event triggers with a guaranteed minimum inter-event time in master–slave Lorenz synchronisation*, Zenodo, 2026. [doi:10.5281/zenodo.24263807](https://doi.org/10.5281/zenodo.24263807)
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24263807.svg)](https://doi.org/10.5281/zenodo.24263807)
 
 ## Abstract
 

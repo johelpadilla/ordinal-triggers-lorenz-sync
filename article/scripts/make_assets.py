@@ -64,7 +64,7 @@ h_ = [Line2D([], [], ls="", marker=MK[m], markersize=4, markerfacecolor="none" i
 h_.append(Line2D([], [], color="k", ls="--", lw=0.8, label=r"bound $2h$"))
 ax.legend(handles=h_, ncol=8, loc="upper center", bbox_to_anchor=(0.5, 1.13), frameon=False, handletextpad=0.2, columnspacing=1.0)
 for sp in ("top", "right"): ax.spines[sp].set_visible(False)
-fig.savefig(FIG / "fig_miet_bound.pdf"); plt.close(fig)
+fig.savefig(FIG / "fig_miet_bound.pdf", metadata={"CreationDate": None}); plt.close(fig)
 
 # ---------------- Figure: RMS and updates
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(6.8, 2.75))
@@ -82,7 +82,7 @@ for a in (a1, a2):
 a1.set_ylabel(r"true RMS error, $t\geq 6$"); a2.set_ylabel("number of control updates on $[0,20]$")
 a1.set_title("(a) Tracking error (mean $\\pm$ SD)", loc="left"); a2.set_title("(b) Update count (mean)", loc="left")
 fig.legend(*a1.get_legend_handles_labels(), loc="lower center", ncol=9, frameon=False, bbox_to_anchor=(0.5, -0.06), handletextpad=0.1, columnspacing=0.9)
-fig.tight_layout(rect=(0, 0.06, 1, 1)); fig.savefig(FIG / "fig_rms_updates.pdf"); plt.close(fig)
+fig.tight_layout(rect=(0, 0.06, 1, 1)); fig.savefig(FIG / "fig_rms_updates.pdf", metadata={"CreationDate": None}); plt.close(fig)
 
 # ---------------- Figure: periodic diagnostic and V invariance
 fig, (a1, a2) = plt.subplots(1, 2, figsize=(6.6, 2.8))
@@ -102,7 +102,7 @@ a2.set_xlabel("RMS, clean sensor"); a2.set_ylabel(r"RMS, distorted sensor $\varp
 a2.set_title("(b) Monotone distortion, per seed", loc="left"); a2.legend(frameon=False, loc="lower right", handletextpad=0.2)
 for a in (a1, a2):
     for sp in ("top", "right"): a.spines[sp].set_visible(False)
-fig.tight_layout(); fig.savefig(FIG / "fig_diagnostics.pdf"); plt.close(fig)
+fig.tight_layout(); fig.savefig(FIG / "fig_diagnostics.pdf", metadata={"CreationDate": None}); plt.close(fig)
 
 # ---------------- Tables
 def pm(a, b, nd=2): return f"${a:.{nd}f}\\pm{b:.{nd}f}$"
