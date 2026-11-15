@@ -1,0 +1,115 @@
+W=20 h=0.01 theta=0.4 delta=0.2 theta_kappa=0.5 bounds={'R1': 0.02, 'R3a': 0.02, 'R2': 0.02, 'R3b': 0.02, 'V': 0.02}
+Self-checks (kappa, D_E = |Dbar_E| + C_E, tau_b, rank invariance): OK
+B_e calibration [clean] = [0.8835, 0.8821, 0.9466] (windows = 7005)
+B_e calibration [noise] = [0.6427, 0.6483, 0.7728] (windows = 7005)
+B_e calibration [distortion] = [0.5084, 0.3403, 0.563] (windows = 7005)
+B_e calibration [drift] = [0.7337, 0.5335, 0.7786] (windows = 7005)
+Re-implemented loop vs bench (condition A, 80 runs): mismatches = 0
+Independent replay of R1/R2/R3a/R3b/V from tau_b: 400/400 runs identical
+A/B/C vs reference results (240 rows): mismatches = 0
+
+=== Summary (20 seeds; true RMS error for t >= 6; IET in time units) ===
+scenario   method     RMS mean+-sd   updates  IETmin  IETmed  div  bound   ok max|dtau|  ties
+clean      A          0.401+-0.028    2001.0    0.01    0.01    0                            
+clean      B          0.703+-0.033     774.8    0.01    0.02    0                            
+clean      C          1.678+-0.350     850.7    0.02    0.02    0                            
+clean      R1        12.811+-2.202     183.7    0.03    0.07    0   0.02   20    0.2000     0
+clean      R2        24.158+-1.486      15.0    0.14    1.00    0   0.02   20    0.2000     0
+clean      R3a       20.222+-1.901      67.4    0.03    0.15    0   0.02   19    0.2000     0
+clean      R3b       23.935+-2.054       1.0     nan     nan    0   0.02    0    0.2000     0
+clean      V         19.310+-2.443     209.7    0.03    0.07    0   0.02   20    0.2000     0
+clean      VA        20.514+-1.376    2001.0    0.01    0.01    0                            
+noise      A          1.079+-0.024    2001.0    0.01    0.01    0                            
+noise      B          1.131+-0.023    1636.7    0.01    0.01    0                            
+noise      C          1.380+-0.042     992.0    0.02    0.02    0                            
+noise      R1        13.243+-1.893     168.4    0.03    0.08    0   0.02   20    0.2000     0
+noise      R2        21.813+-1.504       9.3    0.10    0.71    0   0.02   20    0.2000     0
+noise      R3a       20.764+-1.811      54.4    0.03    0.15    0   0.02   19    0.2000     0
+noise      R3b       22.265+-2.197       3.0    0.19    0.99    0   0.02   18    0.2000     0
+noise      V         20.999+-1.502     170.8    0.03    0.09    0   0.02   20    0.2000     0
+noise      VA        20.452+-1.921    2001.0    0.01    0.01    0                            
+distortion A         11.966+-1.543    2001.0    0.01    0.01    0                            
+distortion B          8.408+-1.041     408.6    0.01    0.03    0                            
+distortion C         10.014+-1.650     960.6    0.02    0.02    0                            
+distortion R1        15.473+-1.534     213.1    0.03    0.06    0   0.02   20    0.2000     0
+distortion R2        24.794+-1.935      11.3    0.10    1.34    0   0.02   20    0.2000     0
+distortion R3a       21.839+-1.475      79.5    0.03    0.13    0   0.02   20    0.2000     0
+distortion R3b       24.347+-1.559      11.2    0.10    1.51    0   0.02   20    0.2000     0
+distortion V         19.310+-2.443     209.7    0.03    0.07    0   0.02   20    0.2000     0
+distortion VA        20.514+-1.376    2001.0    0.01    0.01    0                            
+drift      A         10.416+-1.326    2001.0    0.01    0.01    0                            
+drift      B         11.793+-1.296     388.7    0.01    0.04    0                            
+drift      C         11.325+-1.391     912.5    0.02    0.02    0                            
+drift      R1        16.572+-1.350     211.6    0.03    0.06    0   0.02   20    0.2000     0
+drift      R2        23.950+-1.375      18.2    0.09    0.93    0   0.02   20    0.2000     0
+drift      R3a       21.275+-1.795      74.0    0.03    0.14    0   0.02   19    0.2000     0
+drift      R3b       23.191+-2.076      15.3    0.10    1.19    0   0.02   20    0.2000     0
+drift      V         19.547+-2.450     209.7    0.03    0.07    0   0.02   20    0.2000     0
+drift      VA        21.119+-1.130    2001.0    0.01    0.01    0                            
+
+=== Two-sided paired Wilcoxon tests on RMS (diff = method - ref; 'wins' = seeds with lower RMS) ===
+R1   vs B  clean       mean diff=+12.108  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R1   vs B  noise       mean diff=+12.113  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R1   vs B  distortion  mean diff=+7.066  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R1   vs B  drift       mean diff=+4.779  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R2   vs B  clean       mean diff=+23.456  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R2   vs B  noise       mean diff=+20.683  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R2   vs B  distortion  mean diff=+16.387  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R2   vs B  drift       mean diff=+12.158  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3a  vs B  clean       mean diff=+19.519  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3a  vs B  noise       mean diff=+19.634  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3a  vs B  distortion  mean diff=+13.431  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3a  vs B  drift       mean diff=+9.483  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3b  vs B  clean       mean diff=+23.232  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3b  vs B  noise       mean diff=+21.135  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3b  vs B  distortion  mean diff=+15.939  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3b  vs B  drift       mean diff=+11.399  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+V    vs B  clean       mean diff=+18.608  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+V    vs B  noise       mean diff=+19.869  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+V    vs B  distortion  mean diff=+10.902  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+V    vs B  drift       mean diff=+7.755  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+VA   vs B  clean       mean diff=+19.811  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+VA   vs B  noise       mean diff=+19.321  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+VA   vs B  distortion  mean diff=+12.106  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+VA   vs B  drift       mean diff=+9.326  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R1   vs C  clean       mean diff=+11.132  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R1   vs C  noise       mean diff=+11.863  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R1   vs C  distortion  mean diff=+5.459  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R1   vs C  drift       mean diff=+5.247  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R2   vs C  clean       mean diff=+22.480  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R2   vs C  noise       mean diff=+20.433  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R2   vs C  distortion  mean diff=+14.780  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R2   vs C  drift       mean diff=+12.626  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3a  vs C  clean       mean diff=+18.544  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3a  vs C  noise       mean diff=+19.384  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3a  vs C  distortion  mean diff=+11.825  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3a  vs C  drift       mean diff=+9.950  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3b  vs C  clean       mean diff=+22.256  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3b  vs C  noise       mean diff=+20.885  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3b  vs C  distortion  mean diff=+14.333  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+R3b  vs C  drift       mean diff=+11.867  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+V    vs C  clean       mean diff=+17.632  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+V    vs C  noise       mean diff=+19.619  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+V    vs C  distortion  mean diff=+9.296  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+V    vs C  drift       mean diff=+8.223  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+VA   vs C  clean       mean diff=+18.835  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+VA   vs C  noise       mean diff=+19.072  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+VA   vs C  distortion  mean diff=+10.500  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+VA   vs C  drift       mean diff=+9.794  wins  0/20  p=1.91e-06  p_Holm=7.63e-06
+
+H4: V(distortion) < B(distortion), one-sided Wilcoxon p = 1.000e+00
+H4: RMS of V identical clean vs distortion in all 20 seeds: True; events identical: True
+
+H1: of 400 rule runs: comply 375, violate 0, no IET (<= 1 event) 25
+    smallest IET under any rule = 0.0300 (bound 0.02)
+    max one-step |dtau_b| (tie-free windows) = 0.20000000000000007 (bound 4/W = 0.2); <= bound: True
+    evaluated windows with ties: 0; undefined tau_b: 0
+Total divergences: 0; rows with undefined RMS: 0
+
+=== Diagnostic: periodic schedule P with about as many updates as R1 ===
+clean       period=11 steps  updates=182  RMS P=5.933+-1.523  RMS R1=12.811  R1 better 0/20  Wilcoxon p=1.91e-06
+noise       period=12 steps  updates=167  RMS P=7.942+-2.122  RMS R1=13.243  R1 better 1/20  Wilcoxon p=3.81e-06
+distortion  period=9 steps  updates=223  RMS P=8.594+-2.179  RMS R1=15.473  R1 better 0/20  Wilcoxon p=1.91e-06
+drift       period=9 steps  updates=223  RMS P=15.320+-1.438  RMS R1=16.572  R1 better 3/20  Wilcoxon p=1.99e-03
+
+Total time: 280.6 s

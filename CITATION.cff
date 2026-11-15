@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the article below."
+title: "Zeno-free but late: ordinal event triggers with a guaranteed minimum inter-event time in master-slave Lorenz synchronisation"
+type: software
+authors:
+  - family-names: Padilla-Villanueva
+    given-names: Johel
+    orcid: "https://orcid.org/0000-0002-5797-6931"
+    affiliation: "University of Puerto Rico, Medical Sciences Campus"
+repository-code: "https://github.com/johelpadilla/ordinal-triggers-lorenz-sync"
+license: MIT
+date-released: "2026-11-15"
+keywords:
+  - event-triggered control
+  - Zeno behaviour
+  - minimum inter-event time
+  - Kendall tau-b
+  - chaos synchronisation
+  - Lorenz system
+references:
+  - type: article
+    title: "Minimum inter-event time for ordinal (Kendall tau-b) event triggers: proofs, counterexamples and an open conjecture"
+    authors:
+      - family-names: Padilla-Villanueva
+        given-names: Johel
+    doi: "10.5281/zenodo.24260444"
+    year: 2026
